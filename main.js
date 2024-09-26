@@ -5,7 +5,8 @@ const app = Vue.createApp({
             messageHtml: "<h1> Hello World </h1>",
             upload: false,
             msgUpload: "Ready to upload",
-            loadingImg: 'loading.gif'
+            selectedFile: "There is no file whose be selected",
+            loadingImg: ''
         }
     }
 })

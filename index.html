@@ -12,7 +12,15 @@
         <h1 v-text="message"></h1>
         <h1 v-html="messageHtml"></h1>
         <img v-bind:src="loadingImg" width="50" alt="">
-        <button class="btn btn-primary" v-bind:disabled="upload" v-bind:title="msgUpload">Upload</button>
+        <button class="btn btn-primary" v-bind:disabled="upload"
+                                        v-bind:title="msgUpload"
+                                        v-on:click="upload = true,
+                                                    loadingImg = 'loading.gif',
+                                                    messageHtml = 'Button has been clicked',
+                                                    selectedFile = '' ">Upload</button>
+        <!-- <input type="text" class="form-control" :value="selectedFile"> one way data binding-->
+        <!-- <input type="text" v-model="selectedFile" class="form-control"> two way data binding -->
+        <input type="text" v-model="selectedFile" class="form-control">
     </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>
